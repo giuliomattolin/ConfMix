@@ -1,0 +1,33 @@
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+
+train:  # train images 
+  - /usr/src/datasets/Cityscapes/images/train/aachen
+  - /usr/src/datasets/Cityscapes/images/train/bochum
+  - /usr/src/datasets/Cityscapes/images/train/bremen
+  - /usr/src/datasets/Cityscapes/images/train/cologne
+  - /usr/src/datasets/Cityscapes/images/train/darmstadt
+  - /usr/src/datasets/Cityscapes/images/train/dusseldorf
+  - /usr/src/datasets/Cityscapes/images/train/erfurt
+  - /usr/src/datasets/Cityscapes/images/train/hamburg
+  - /usr/src/datasets/Cityscapes/images/train/hanover
+  - /usr/src/datasets/Cityscapes/images/train/jena
+  - /usr/src/datasets/Cityscapes/images/train/krefeld
+  - /usr/src/datasets/Cityscapes/images/train/monchengladbach
+  - /usr/src/datasets/Cityscapes/images/train/strasbourg
+  - /usr/src/datasets/Cityscapes/images/train/stuttgart
+  - /usr/src/datasets/Cityscapes/images/train/tubingen
+  - /usr/src/datasets/Cityscapes/images/train/ulm
+  - /usr/src/datasets/Cityscapes/images/train/weimar
+  - /usr/src/datasets/Cityscapes/images/train/zurich
+  - /usr/src/datasets/FoggyFromCityscapes/images
+val:  # val images 
+  - /usr/src/datasets/FoggyCityscapes/images/val/frankfurt
+  - /usr/src/datasets/FoggyCityscapes/images/val/lindau
+  - /usr/src/datasets/FoggyCityscapes/images/val/munster
+test:  # test images (optional)
+
+# Classes
+nc: 8 # number of classes
+names: ['person', 'car', 'train', 'rider', 'truck', 'motorcycle', 'bicycle', 'bus'] # class names
+# Download script/URL (optional)
+download: 

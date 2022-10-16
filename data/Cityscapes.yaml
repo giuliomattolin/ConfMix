@@ -1,0 +1,32 @@
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+
+train:  # train images 
+  - /usr/src/datasets/Cityscapes/adv_KITTI/images/train/aachen
+  - /usr/src/datasets/Cityscapes/adv_KITTI/images/train/bochum
+  - /usr/src/datasets/Cityscapes/adv_KITTI/images/train/bremen
+  - /usr/src/datasets/Cityscapes/adv_KITTI/images/train/cologne
+  - /usr/src/datasets/Cityscapes/adv_KITTI/images/train/darmstadt
+  - /usr/src/datasets/Cityscapes/adv_KITTI/images/train/dusseldorf
+  - /usr/src/datasets/Cityscapes/adv_KITTI/images/train/erfurt
+  - /usr/src/datasets/Cityscapes/adv_KITTI/images/train/hamburg
+  - /usr/src/datasets/Cityscapes/adv_KITTI/images/train/hanover
+  - /usr/src/datasets/Cityscapes/adv_KITTI/images/train/jena
+  - /usr/src/datasets/Cityscapes/adv_KITTI/images/train/krefeld
+  - /usr/src/datasets/Cityscapes/adv_KITTI/images/train/monchengladbach
+  - /usr/src/datasets/Cityscapes/adv_KITTI/images/train/strasbourg
+  - /usr/src/datasets/Cityscapes/adv_KITTI/images/train/stuttgart
+  - /usr/src/datasets/Cityscapes/adv_KITTI/images/train/tubingen
+  - /usr/src/datasets/Cityscapes/adv_KITTI/images/train/ulm
+  - /usr/src/datasets/Cityscapes/adv_KITTI/images/train/weimar
+  - /usr/src/datasets/Cityscapes/adv_KITTI/images/train/zurich
+val:  # val images 
+  - /usr/src/datasets/Cityscapes/adv_KITTI/images/val/frankfurt
+  - /usr/src/datasets/Cityscapes/adv_KITTI/images/val/lindau
+  - /usr/src/datasets/Cityscapes/adv_KITTI/images/val/munster
+test:  # test images (optional)
+
+# Classes
+nc: 1 # number of classes
+names: ['car'] # class names
+# Download script/URL (optional)
+download: 
