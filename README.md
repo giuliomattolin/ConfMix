@@ -9,8 +9,7 @@
 > Giulio Mattolin, Luca Zanella, [Yiming Wang](https://www.yimingwang.it/), [Elisa Ricci](http://elisaricci.eu/) <br>
 > **WACV 2023**
 
-<!-- > Paper: [ArXiv]() <br>
-> Supplementary: [Website]()) <br> -->
+> Paper: [ArXiv](https://arxiv.org/abs/2210.11539) <br>
 
 > **Abstract:** *Unsupervised Domain Adaptation (UDA) for object detection aims to adapt a model trained on a source domain to detect instances from a new target domain for which annotations are not available.
 Different from traditional approaches, we propose ConfMix, the first method that introduces a sample mixing strategy based on region-level detection confidence for adaptive object detector learning. We mix the local region of the target sample that corresponds to the most confident pseudo detections with a source image, and apply an additional consistency loss term to gradually adapt towards the target data distribution. In order to robustly define a confidence score for a region, we exploit the confidence score per pseudo detection that accounts for both the detector-dependent confidence and the bounding box uncertainty.
