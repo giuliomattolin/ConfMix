@@ -58,7 +58,7 @@ We construct the training and testing set for the three benchmark settings, by p
 
 - Cityscapes -> Foggy Cityscapes
   - Download Cityscapes and Foggy Cityscapes dataset from the following [link](https://www.cityscapes-dataset.com/downloads/). Particularly, we use *leftImg8bit_trainvaltest.zip* for Cityscapes and *leftImg8bit_trainvaltest_foggy.zip* for FoggyCityscapes.
-  - Download and extract the converted annotation from the following links: [Cityscapes(YOLO format)](https://drive.google.com/file/d/1bwnNJraKO7ui1Kvl1kPVKdW6xafy1-sr/view?usp=sharing) and [Foggy Cityscapes(YOLO format)](https://drive.google.com/drive/folders/1nTtNXPNCUD7aDQAT3SLgc4kqfL7S-xX7?usp=sharing) move the them to `Cityscapes/labels/train` and `FoggyCityscapes/labels/train`, `FoggyCityscapes/labels/val` directories.
+  - Download and extract the converted annotation from the following links: [Cityscapes (YOLO format)](https://drive.google.com/file/d/1bwnNJraKO7ui1Kvl1kPVKdW6xafy1-sr/view?usp=sharing) and [Foggy Cityscapes (YOLO format)](https://drive.google.com/drive/folders/1nTtNXPNCUD7aDQAT3SLgc4kqfL7S-xX7?usp=sharing) move the them to `Cityscapes/labels/train` and `FoggyCityscapes/labels/train`, `FoggyCityscapes/labels/val` directories.
   - Extract the training sets from *leftImg8bit_trainvaltest.zip*, then move the folder `leftImg8bit/train/` to `Cityscapes/images/train` directory.
   - Extract the training and validation set from *leftImg8bit_trainvaltest_foggy.zip*, then move the folder `leftImg8bit_foggy/train/` and `leftImg8bit_foggy/val/` to `FoggyCityscapes/images/train` and `FoggyCityscapes/images/val` directory, respectively.
 - Sim10k -> Cityscapes (car category only)
@@ -97,7 +97,7 @@ python train.py \
  --batch 2 \
  --img 600 \
  --epochs 20 \
- --data data/Cityscapes2FoggyCityscapes.yaml \
+ --data data/Cityscapes2Foggy.yaml \
  --weights yolov5s.pt
 ```
 
@@ -150,7 +150,7 @@ python uda_train.py \
  --batch 2 \
  --img 600 \
  --epochs 50 \
- --data data/Cityscapes2Foggy.yaml \
+ --data data/Sim10K2Cityscapes.yaml \
  --weights runs/train/sim10k/weights/last.pt
 ```
 
