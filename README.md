@@ -207,5 +207,14 @@ Please note that in all our experiments we only consider the weights associated 
 
 # Citation
 
-<!-- Please consider citing our paper in your publications if the project helps your research. -->
-Citation will be uploaded SOON 🚀
+Please consider citing our paper in your publications if the project helps your research.
+```
+@inproceedings{mattolin2023confmix,
+  title={ConfMix: Unsupervised Domain Adaptation for Object Detection via Confidence-based Mixing},
+  author={Mattolin, Giulio and Zanella, Luca and Ricci, Elisa and Wang, Yiming},
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
+  pages={423--433},
+  year={2023}
+}
+```
+
