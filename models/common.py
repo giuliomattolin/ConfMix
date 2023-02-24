@@ -435,11 +435,12 @@ class DetectMultiBackend(nn.Module):
                 raise Exception('ERROR: YOLOv5 TF.js inference is not supported')
         self.__dict__.update(locals())  # assign all variables to self
 
-    def forward(self, im, augment=False, visualize=False, val=False):
+    def forward(self, im, augment=False, visualize=False, val=False, pseudo=False):
         # YOLOv5 MultiBackend inference
         b, ch, h, w = im.shape  # batch, channel, height, width
         if self.pt:  # PyTorch
-            y = self.model(im, augment=augment, visualize=visualize)[0]
+            # y = self.model(im, augment=augment, visualize=visualize)[0]
+            y = self.model(im, augment=augment, visualize=visualize, pseudo=pseudo)
         elif self.jit:  # TorchScript
             y = self.model(im)[0]
         elif self.dnn:  # ONNX OpenCV DNN
@@ -491,7 +492,8 @@ class DetectMultiBackend(nn.Module):
 
         if isinstance(y, np.ndarray):
             y = torch.tensor(y, device=self.device)
-        return (y, []) if val else y
+        # return (y, []) if val else y
+        return y
 
     def warmup(self, imgsz=(1, 3, 640, 640)):
         # Warmup model by running inference once
