@@ -57,7 +57,7 @@ docker run -it --gpus all --ipc=host -v /path/to/directory/ConfMix:/usr/src/app 
 We construct the training and testing set for the three benchmark settings, by performing the following steps:
 
 - Cityscapes -> Foggy Cityscapes
-  - Download Cityscapes and Foggy Cityscapes dataset from the following [link](https://www.cityscapes-dataset.com/downloads/). Particularly, we use *leftImg8bit_trainvaltest.zip* for Cityscapes and *leftImg8bit_trainvaltest_foggy.zip* for FoggyCityscapes.
+  - Download Cityscapes and Foggy Cityscapes dataset from the following [link](https://www.cityscapes-dataset.com/downloads/). Particularly, we use *leftImg8bit_trainvaltest.zip* for Cityscapes and *leftImg8bit_trainvaltest_foggy.zip* for FoggyCityscapes, considering only images with $\beta$ = 0.02.
   - Download and extract the converted annotation from the following links: [Cityscapes (YOLO format)](https://drive.google.com/file/d/1bwnNJraKO7ui1Kvl1kPVKdW6xafy1-sr/view?usp=sharing) and [Foggy Cityscapes (YOLO format)](https://drive.google.com/drive/folders/1nTtNXPNCUD7aDQAT3SLgc4kqfL7S-xX7?usp=sharing) move the them to `Cityscapes/labels/train` and `FoggyCityscapes/labels/train`, `FoggyCityscapes/labels/val` directories.
   - Extract the training sets from *leftImg8bit_trainvaltest.zip*, then move the folder `leftImg8bit/train/` to `Cityscapes/images/train` directory.
   - Extract the training and validation set from *leftImg8bit_trainvaltest_foggy.zip*, then move the folder `leftImg8bit_foggy/train/` and `leftImg8bit_foggy/val/` to `FoggyCityscapes/images/train` and `FoggyCityscapes/images/val` directory, respectively.
